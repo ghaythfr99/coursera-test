@@ -1,10 +1,26 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" ng-app="CalculatriceApp" >
   <head>
     <meta charset="utf-8">
-    <title>hello coursera</title>
+    <script src="angular.min..js"></script>
+    <script src="app.js"></script>
+    <style>body { font-size: 1.3em; }</style>
+    <title>my calculator</title>
   </head>
   <body>
-    <<h1>hello coursera  students! i am thrilled about this cours!</h1>
+    <h1>calculator</h1>
+    <div ng-controller="CalculatriceController" >
+      <input type="number"  ng-model="num1">
+      <input type="number"  ng-model="num2">
+      <br>
+      <button ng-click="add()">A+B</button>
+      <button ng-click="sub()">A-B</button>
+      <button ng-click="mult()">A*B</button>
+      <button ng-click="div()">A/B</button>
+      <br>
+      
+
+      <h2>result: {{num3}} </h2>
+  </div>
   </body>
 </html>
