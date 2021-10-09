@@ -1,25 +1,30 @@
 (function(){
     'use strict';
-     
     angular.module('CalculatriceApp',[])
 
     .controller('CalculatriceController',CalculatriceController);
     CalculatriceController.$inject = ['$scope'];
     function CalculatriceController ($scope){
-       $scope.num1="0";
-       $scope.num2="0";
-       $scope.num3="";
-       $scope.add = function(){
-        $scope.num3=$scope.num1+$scope.num2;
-       };
-       $scope.sub = function(){
-        $scope.num3=$scope.num1-$scope.num2;
-       };
-       $scope.mult = function(){
-        $scope.num3=$scope.num1*$scope.num2;
-       };
-       $scope.div = function(){
-        $scope.num3=$scope.num1/$scope.num2;
+       $scope.text1="";
+       $scope.result="";
+      
+       $scope.test = function(){
+        $scope.words = $scope.text1.split(',');
+        
+        var x = $scope.words.length;
+        if( $scope.text1=="" ){
+            $scope.result ="Please enter data first"
+        }
+        
+        else{
+            if( x < 4){
+                $scope.result ="Enjoy!"
+            }
+            else{
+            $scope.result ="Too much!"}
+            }
+         
+        
        };
     };
 })();

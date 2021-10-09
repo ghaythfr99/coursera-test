@@ -5,22 +5,23 @@
     <script src="angular.min..js"></script>
     <script src="app.js"></script>
     <style>body { font-size: 1.3em; }</style>
-    <title>my calculator</title>
+    <title>Assignment</title>
+    <style>body{
+      background-image: url(menu.jpg);
+    }
+    </style>
   </head>
   <body>
-    <h1>calculator</h1>
+    <h1>assignment1</h1>
     <div ng-controller="CalculatriceController" >
-      <input type="number"  ng-model="num1">
-      <input type="number"  ng-model="num2">
+      <input type="text"  ng-model="text1">
       <br>
-      <button ng-click="add()">A+B</button>
-      <button ng-click="sub()">A-B</button>
-      <button ng-click="mult()">A*B</button>
-      <button ng-click="div()">A/B</button>
-      <br>
-      
+      <button ng-click="test()">Check If Too Much</button>
+     
+      {{x}}
 
-      <h2>result: {{num3}} </h2>
+      <h2>{{result}} </h2>
+      
   </div>
   </body>
 </html>
